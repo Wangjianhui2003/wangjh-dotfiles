@@ -8,7 +8,7 @@ local config = wezterm.config_builder()
 config.enable_tab_bar = true
 config.use_fancy_tab_bar = false
 config.show_tab_index_in_tab_bar = false
--- config.show_close_tab_button_in_tabs = true
+config.show_close_tab_button_in_tabs = true
 
 -- 设置 Tab 栏部分的背景色（未被 Tab 占据的空白处）
 config.colors = {
@@ -50,8 +50,9 @@ end)
 config.enable_scroll_bar = true
 
 -- font
-config.font = wezterm.font("JetBrainsMonoNL NF", { weight = "Regular", italic = ture })
-config.font_size = 10
+-- config.font = wezterm.font("JetBrainsMonoNL NF", { weight = "Regular", italic = ture })
+config.font = wezterm.font("Ubuntu Sans Mono")
+config.font_size = 11
 
 -- background
 -- config.window_background_opacity = 0.95
@@ -64,7 +65,7 @@ config.font_size = 10
 -- On macOS, 'RESIZE|INTEGRATED_BUTTONS' also looks nice if
 -- you want to keep the window controls visible and integrate
 -- them into the tab bar.
-config.window_decorations = "RESIZE|INTEGRATED_BUTTONS"
+config.window_decorations = "INTEGRATED_BUTTONS|RESIZE" 
 
 -- config.window_close_confirmation = "NeverPrompt"
 
@@ -101,13 +102,7 @@ config.keys = {
 		mods = "SHIFT|CTRL",
 		action = wezterm.action.ToggleFullScreen,
 	},
-	{
-	    	key = 'w',
-	    	mods = 'CTRL',
-	    	action = wezterm.action.CloseCurrentTab { confirm = true},
-	},
 }
--- close window
 
 -- re-pos
 wezterm.on("window-config-reloaded", function(window, pane)
