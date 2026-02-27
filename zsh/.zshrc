@@ -104,16 +104,28 @@ alias zshconfig="nvim ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
 alias ll="ls -alh"
+# to
 alias todotfiles="cd ~/wangjh-dotfiles"
+alias toobsidian="clear && cd ~/Documents/obsidian/jhobsidian"
+
 alias wezconfig="nvim ~/.config/wezterm/wezterm.lua"
+alias ghoconfig="nvim ~/.config/ghostty/config"
+alias zshconfig="nvim ~/.zshrc"
 
 
 export PATH="$HOME/.local/bin:$PATH"
+# maven
+export PATH="/opt/apache-maven-3.9.12/bin:$PATH"
 
-
+# nvm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
+# bun completions
+[ -s "/home/jianhui/.bun/_bun" ] && source "/home/jianhui/.bun/_bun"
 
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"

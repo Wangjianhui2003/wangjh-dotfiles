@@ -47,3 +47,27 @@
 # # which is explained in the docs for that config option.
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
+
+font-family = "Ubuntu Sans Mono"
+#theme = Catppuccin Frappe
+
+#========== background ===========
+# background-opacity = 0.50
+# background-blur = 20
+
+#========== window ==========
+#title bar
+# window-decoration = false
+# window-padding-x = 0
+# window-padding-y = 0 
+
+#can display how many characters
+window-height = 50
+window-width = 180
+
+#remove padding(e.g. there is padding when opening neovim) 
+window-padding-color = extend-always
+
+#
+# window-position-x = 1
+# window-position-y = 1
