@@ -48,7 +48,9 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-font-family = "Ubuntu Sans Mono"
+#=====================appearance====================
+# font-family = "Ubuntu Sans Mono"
+font-size = 11
 #theme = Catppuccin Frappe
 
 #========== background ===========
