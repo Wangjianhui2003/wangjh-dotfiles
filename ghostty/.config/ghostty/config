@@ -52,6 +52,7 @@
 # font-family = "Ubuntu Sans Mono"
 font-size = 11
 #theme = Catppuccin Frappe
+theme = Ayu
 
 #========== background ===========
 # background-opacity = 0.50
@@ -67,8 +68,8 @@ font-size = 11
 window-height = 50
 window-width = 180
 
-#remove padding(e.g. there is padding when opening neovim) 
-window-padding-color = extend-always
+#remove padding(e.g. there is padding when opening neovim) 使用extend-always会让powerlevel10k出现问题 
+#window-padding-color = extend-always
 
 #
 # window-position-x = 1
