@@ -74,3 +74,8 @@ window-width = 180
 #
 # window-position-x = 1
 # window-position-y = 1
+
+#=========================other function===================
+#to copy the terminfo entry the first time you log into a new server over SSH.
+shell-integration-features = ssh-terminfo
+
