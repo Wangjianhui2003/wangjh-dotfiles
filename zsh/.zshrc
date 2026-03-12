@@ -130,6 +130,7 @@ alias toobsidian="clear && cd ~/Documents/obsidian/jhobsidian"
 alias wezconfig="nvim ~/.config/wezterm/wezterm.lua"
 alias ghoconfig="nvim ~/.config/ghostty/config"
 alias zshconfig="nvim ~/.zshrc"
+alias r="ranger"
 
 
 export PATH="$HOME/.local/bin:$PATH"
@@ -151,3 +152,7 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+
+# default editor,range use this to open file
+export EDITOR=nvim
