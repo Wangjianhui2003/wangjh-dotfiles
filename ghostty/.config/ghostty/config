@@ -50,12 +50,13 @@
 
 #=====================appearance====================
 # font-family = "Ubuntu Sans Mono"
+# font-family = "JetBrainsMono Nerd Font"
 font-size = 11
 #theme = Catppuccin Frappe
-# theme = Ayu
+theme = Ayu
 # theme = Ayu Mirage
 # theme = GitHub Dark Dimmed
-theme = GitHub Dark Default
+# theme = GitHub Dark Default
 # theme = Electron Highlighter
 
 #========== background ===========
@@ -86,4 +87,3 @@ shell-integration-features = ssh-terminfo
 
 #========================for image preview======================
 #term = xterm-kitty
-

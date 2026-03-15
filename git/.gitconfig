@@ -1,3 +1,5 @@
 [user]
 	name = wangjh
 	email = wangjianhui2003@outlook.com
+[init]
+	defaultBranch = main
