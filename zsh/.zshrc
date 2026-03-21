@@ -131,6 +131,7 @@ alias wezconfig="nvim ~/.config/wezterm/wezterm.lua"
 alias ghoconfig="nvim ~/.config/ghostty/config"
 alias zshconfig="nvim ~/.zshrc"
 alias r="ranger"
+alias cc="claude"
 
 
 export PATH="$HOME/.local/bin:$PATH"
