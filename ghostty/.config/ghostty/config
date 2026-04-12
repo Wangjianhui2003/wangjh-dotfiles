@@ -70,13 +70,12 @@ theme = Ayu
 # window-padding-y = 0 
 
 #can display how many characters
-window-height = 50
-window-width = 180
+window-height = 40
+window-width = 160
 
 #remove padding(e.g. there is padding when opening neovim) 使用extend-always会让powerlevel10k出现问题 
 #window-padding-color = extend-always
 
-#
 # window-position-x = 1
 # window-position-y = 1
 
