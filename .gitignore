@@ -1,0 +1,18 @@
+# Local dependencies
+node_modules/
+
+# Temporary test files
+tmp_*
+
+# Neovim/Vim temp files
+*.swp
+*.swo
+*.tmp
+*~
+
+# OS/editor noise
+.DS_Store
+Thumbs.db
+
+**/*.log
+**/*lock.json

@@ -1,1 +1,7 @@
 set keep-english-in-normal
+set clipboard+=unnamedplus
+
+
+set visualbell
+set noerrorbells
+set t_vb=
