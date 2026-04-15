@@ -121,7 +121,17 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
 alias cls="clear"
-alias ll="ls -alh"
+# alias ll="ls -alh"
+# command -v lsd >/dev/null 2>&1 && alias ll='lsd -alh' || alias ll='ls -alh'
+# use eza,otherwise ls
+if command -v eza >/dev/null 2>&1; then
+  alias ll="eza -alh --git --icons --group-directories-first --group --time-style='+%Y-%m-%d %H:%M %a'"
+else
+  alias ll='ls -alh'
+fi
+#eza tree 
+alias lt="eza -T -L 2 -alh --git --icons --group-directories-first --group --time-style='+%Y-%m-%d %H:%M %a'"
+
 # to
 alias todotfiles="cd ~/wangjh-dotfiles"
 alias toobsidian="clear && cd ~/Documents/obsidian/jhobsidian"
