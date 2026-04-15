@@ -1,9 +1,9 @@
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
+# if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+#   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
@@ -17,7 +17,8 @@ export ZSH="$HOME/.oh-my-zsh"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 # ZSH_THEME="robbyrussell"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
+ZSH_THEME=""
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -90,7 +91,6 @@ plugins=(
 )
 
 
-
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -120,7 +120,6 @@ source $ZSH/oh-my-zsh.sh
 #
 # Example aliases
 alias zshconfig="nvim ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
 alias cls="clear"
 alias ll="ls -alh"
 # to
@@ -130,8 +129,12 @@ alias toobsidian="clear && cd ~/Documents/obsidian/jhobsidian"
 alias wezconfig="nvim ~/.config/wezterm/wezterm.lua"
 alias ghoconfig="nvim ~/.config/ghostty/config"
 alias zshconfig="nvim ~/.zshrc"
+
 alias r="ranger"
 alias cc="claude"
+alias cx="codex"
+
+alias nvimk='NVIM_APPNAME="nvim-kickstart" nvim'
 
 
 export PATH="$HOME/.local/bin:$PATH"
@@ -152,8 +155,13 @@ export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+# [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 
 # default editor,range use this to open file
 export EDITOR=nvim
+
+
+# starship
+# put this at the end of zshrc
+eval "$(starship init zsh)"
