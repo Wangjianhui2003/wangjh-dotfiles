@@ -1,3 +1,4 @@
+//Use fastfetch -h <module>-format to see available format options for each module.
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
     "general": {
@@ -38,21 +39,18 @@
         },
         {
             "type": "display",
-            "key": "󰍹 Display",
-            "keyColor": "cyan",
-            "format": "({6}) {1}x{2} @ {3} Hz in {12}\" [{7}]"
+            "key": "󰍹 Display ({name})",
+            "keyColor": "cyan"
         },
         {
             "type": "de",
             "key": "󰧨 DE",
-            "keyColor": "magenta",
-            "format": "{2} {3}"
+            "keyColor": "magenta"
         },
         {
             "type": "wm",
             "key": "󱂬 WM",
             "keyColor": "magenta"
-            // "format": "{1} ({3})"
         },
         {
             "type": "wmtheme",
@@ -82,14 +80,12 @@
         {
             "type": "terminal",
             "key": " Terminal",
-            "keyColor": "green",
-            "format": "{5} {6}"
+            "keyColor": "green"
         },
         {
             "type": "terminalfont",
             "key": "󰛖 Terminal Font",
-            "keyColor": "yellow",
-            "format": "{2} ({3})"
+            "keyColor": "yellow"
         },
         {
             "type": "cpu",
@@ -98,7 +94,7 @@
         },
         {
             "type": "gpu",
-            "key": "󰢮 GPU {1}",
+            "key": "󰢮 GPU {index}",
             "keyColor": "red"
         },
         {
@@ -113,22 +109,18 @@
         },
         {
             "type": "disk",
-            "key": "󰋊 Disk",
-            "keyColor": "cyan",
-            "format": "({20}) {1} / {2} ({3}) - {9}"
+            "key": "󰋊 Disk ({mountpoint})",
+            "keyColor": "cyan"
         },
         {
             "type": "localip",
-            "key": "󰩟 Local IP",
-            "keyColor": "blue",
-            "showPrefixLen": true,
-            "format": "({4}) {1}"
+            "key": "󰩟 Local IP ({ifname})",
+            "keyColor": "blue"
         },
         {
             "type": "battery",
-            "key": "󰁹 Battery ({2})",
-            "keyColor": "yellow",
-            "format": "{4} [{5}]"
+            "key": "󰁹 Battery ({name})",
+            "keyColor": "yellow"
         },
         {
             "type": "poweradapter",
@@ -143,8 +135,6 @@
         "break",
         {
             "type": "colors"
-            // "key": "󰏘 Palette",
-            // "keyColor": "white"
         }
     ],
     "logo": {
