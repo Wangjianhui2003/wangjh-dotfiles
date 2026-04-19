@@ -33,7 +33,7 @@
     ],
     "logo": {
         "type": "auto",
-        "source": "~/Downloads/ahriv1.jpeg",
+        "source": "~/.config/fastfetch/logo.jpeg",
         "width": 40
     }
 }
