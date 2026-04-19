@@ -3,33 +3,137 @@
     "modules": [
         "title",
         "separator",
-        "os",
-        "host",
-        "kernel",
-        "uptime",
-        "packages",
-        "shell",
-        "display",
-        "de",
-        "wm",
-        "wmtheme",
-        "theme",
-        "icons",
-        "font",
-        "cursor",
-        "terminal",
-        "terminalfont",
-        "cpu",
-        "gpu",
-        "memory",
-        "swap",
-        "disk",
-        "localip",
-        "battery",
-        "poweradapter",
-        "locale",
+        {
+            "type": "os",
+            "key": "󰣇 OS",
+            "keyColor": "blue"
+        },
+        {
+            "type": "host",
+            "key": "󰌢 Host",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "kernel",
+            "key": "󰒋 Kernel",
+            "keyColor": "green"
+        },
+        {
+            "type": "uptime",
+            "key": "󰔚 Uptime",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "packages",
+            "key": "󰏗 Packages",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "shell",
+            "key": "󰆍 Shell",
+            "keyColor": "blue"
+        },
+        {
+            "type": "display",
+            "key": "󰍹 Display",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "de",
+            "key": "󰧨 DE",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "wm",
+            "key": "󱂬 WM",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "wmtheme",
+            "key": "󰉼 WM Theme",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "theme",
+            "key": "󰉼 Theme",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "icons",
+            "key": "󰀻 Icons",
+            "keyColor": "magenta"
+        },
+        {
+            "type": "font",
+            "key": "󰛖 Font",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "cursor",
+            "key": "󰇀 Cursor",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "terminal",
+            "key": " Terminal",
+            "keyColor": "green"
+        },
+        {
+            "type": "terminalfont",
+            "key": "󰛖 Term Font",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "cpu",
+            "key": "󰻠 CPU",
+            "keyColor": "red"
+        },
+        {
+            "type": "gpu",
+            "key": "󰢮 GPU",
+            "keyColor": "red"
+        },
+        {
+            "type": "memory",
+            "key": "󰍛 Memory",
+            "keyColor": "green"
+        },
+        {
+            "type": "swap",
+            "key": "󰓡 Swap",
+            "keyColor": "green"
+        },
+        {
+            "type": "disk",
+            "key": "󰋊 Disk",
+            "keyColor": "cyan"
+        },
+        {
+            "type": "localip",
+            "key": "󰩟 Local IP",
+            "keyColor": "blue"
+        },
+        {
+            "type": "battery",
+            "key": "󰁹 Battery",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "poweradapter",
+            "key": "󰚥 Adapter",
+            "keyColor": "yellow"
+        },
+        {
+            "type": "locale",
+            "key": "󰗊 Locale",
+            "keyColor": "white"
+        },
         "break",
-        "colors"
+        {
+            "type": "colors"
+            // "key": "󰏘 Palette",
+            // "keyColor": "white"
+        }
     ],
     "logo": {
         "type": "auto",
