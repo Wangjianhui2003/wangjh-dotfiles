@@ -1,5 +1,8 @@
 {
     "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
+    "general": {
+        "detectVersion": true
+    },
     "modules": [
         "title",
         "separator",
@@ -36,17 +39,20 @@
         {
             "type": "display",
             "key": "󰍹 Display",
-            "keyColor": "cyan"
+            "keyColor": "cyan",
+            "format": "({6}): {1}x{2} @ {3} Hz in {12}\" [{7}]"
         },
         {
             "type": "de",
             "key": "󰧨 DE",
-            "keyColor": "magenta"
+            "keyColor": "magenta",
+            "format": "{2} {3}"
         },
         {
             "type": "wm",
             "key": "󱂬 WM",
             "keyColor": "magenta"
+            // "format": "{1} ({3})"
         },
         {
             "type": "wmtheme",
@@ -76,12 +82,14 @@
         {
             "type": "terminal",
             "key": " Terminal",
-            "keyColor": "green"
+            "keyColor": "green",
+            "format": "{5} {6}"
         },
         {
             "type": "terminalfont",
-            "key": "󰛖 Term Font",
-            "keyColor": "yellow"
+            "key": "󰛖 Terminal Font",
+            "keyColor": "yellow",
+            "format": "{2} ({3})"
         },
         {
             "type": "cpu",
@@ -90,7 +98,7 @@
         },
         {
             "type": "gpu",
-            "key": "󰢮 GPU",
+            "key": "󰢮 GPU {1}",
             "keyColor": "red"
         },
         {
@@ -106,17 +114,21 @@
         {
             "type": "disk",
             "key": "󰋊 Disk",
-            "keyColor": "cyan"
+            "keyColor": "cyan",
+            "format": "({20}): {1} / {2} ({3}) - {9}"
         },
         {
             "type": "localip",
             "key": "󰩟 Local IP",
-            "keyColor": "blue"
+            "keyColor": "blue",
+            "showPrefixLen": true,
+            "format": "({4}): {1}"
         },
         {
             "type": "battery",
-            "key": "󰁹 Battery",
-            "keyColor": "yellow"
+            "key": "󰁹 Battery ({2})",
+            "keyColor": "yellow",
+            "format": "{4} [{5}]"
         },
         {
             "type": "poweradapter",
