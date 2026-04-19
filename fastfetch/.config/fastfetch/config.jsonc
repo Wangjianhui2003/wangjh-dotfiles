@@ -40,7 +40,7 @@
             "type": "display",
             "key": "󰍹 Display",
             "keyColor": "cyan",
-            "format": "({6}): {1}x{2} @ {3} Hz in {12}\" [{7}]"
+            "format": "({6}) {1}x{2} @ {3} Hz in {12}\" [{7}]"
         },
         {
             "type": "de",
@@ -115,14 +115,14 @@
             "type": "disk",
             "key": "󰋊 Disk",
             "keyColor": "cyan",
-            "format": "({20}): {1} / {2} ({3}) - {9}"
+            "format": "({20}) {1} / {2} ({3}) - {9}"
         },
         {
             "type": "localip",
             "key": "󰩟 Local IP",
             "keyColor": "blue",
             "showPrefixLen": true,
-            "format": "({4}): {1}"
+            "format": "({4}) {1}"
         },
         {
             "type": "battery",
