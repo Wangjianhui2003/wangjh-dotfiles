@@ -131,6 +131,7 @@ else
 fi
 #eza tree 
 alias lt="eza -T -L 2 -alh --git --icons --group-directories-first --group --time-style='+%Y-%m-%d %H:%M %a'"
+alias inst="sudo apt install"
 
 # to
 alias todotfiles="cd ~/wangjh-dotfiles"
@@ -143,6 +144,7 @@ alias zshconfig="nvim ~/.zshrc"
 alias r="ranger"
 alias cc="claude"
 alias cx="codex"
+alias ff="fastfetch"
 
 alias nvimk='NVIM_APPNAME="nvim-kickstart" nvim'
 
