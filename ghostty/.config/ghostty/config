@@ -52,8 +52,9 @@
 # font-family = "Ubuntu Sans Mono"
 # font-family = "JetBrainsMono Nerd Font"
 font-size = 11
-#theme = Catppuccin Frappe
-theme = Ayu
+# theme = Catppuccin Frappe
+theme = Catppuccin Mocha
+# theme = Ayu
 # theme = Ayu Mirage
 # theme = GitHub Dark Dimmed
 # theme = GitHub Dark Default
