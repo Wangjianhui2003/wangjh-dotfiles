@@ -88,6 +88,8 @@ plugins=(
     git
     zsh-autosuggestions
     zsh-syntax-highlighting
+    vi-mode
+    fzf-tab
 )
 
 
@@ -117,9 +119,8 @@ source $ZSH/oh-my-zsh.sh
 # - $ZSH_CUSTOM/aliases.zsh
 # - $ZSH_CUSTOM/macos.zsh
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias ll="ls -alh"
+
+
 # command -v lsd >/dev/null 2>&1 && alias ll='lsd -alh' || alias ll='ls -alh'
 # use eza,otherwise ls
 if command -v eza >/dev/null 2>&1; then
@@ -131,11 +132,9 @@ fi
 alias lt="eza -T -L 2 -alh --git --icons --group-directories-first --group --time-style='+%Y-%m-%d %H:%M %a'"
 alias inst="sudo apt install"
 # to
-alias todotfiles="cd ~/wangjh-dotfiles"
-alias toobsidian="clear && cd ~/Documents/obsidian/jhobsidian"
 alias wezconfig="nvim ~/.config/wezterm/wezterm.lua"
 alias ghoconfig="nvim ~/.config/ghostty/config"
-alias zshconfig="nvim ~/.zshrc"
+alias zconfig="nvim ~/.zshrc"
 
 alias cls="clear"
 alias r="ranger"
@@ -143,11 +142,19 @@ alias cc="claude"
 alias cx="codex"
 alias ff="fastfetch"
 alias b="btop"
-alias y="yazi"
 alias g="lazygit"
+
 
 alias nvimk='NVIM_APPNAME="nvim-kickstart" nvim'
 
+# yazi shell wrapper
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	command yazi "$@" --cwd-file="$tmp"
+	IFS= read -r -d '' cwd < "$tmp"
+	[ "$cwd" != "$PWD" ] && [ -d "$cwd" ] && builtin cd -- "$cwd"
+	rm -f -- "$tmp"
+}
 
 export PATH="$HOME/.local/bin:$PATH"
 # maven
@@ -155,8 +162,8 @@ export PATH="/opt/apache-maven-3.9.12/bin:$PATH"
 
 # nvm
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
 # bun completions
@@ -176,6 +183,8 @@ export PATH=$PATH:/usr/local/go/bin
 # default editor,range use this to open file
 export EDITOR=nvim
 
+# reduce vi-mode ESC(mode change) timeout
+export KEYTIMEOUT=1
 
 # starship
 # put this at the end of zshrc
