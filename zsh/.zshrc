@@ -83,9 +83,9 @@ ZSH_THEME=""
 # 外部插件：
 # zsh-autosuggestions 
 # zsh-syntax-highlighting
+# z插件替换成zoxide
 plugins=(
     git
-    z
     zsh-autosuggestions
     zsh-syntax-highlighting
 )
@@ -119,8 +119,6 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="nvim ~/.zshrc"
-alias cls="clear"
 # alias ll="ls -alh"
 # command -v lsd >/dev/null 2>&1 && alias ll='lsd -alh' || alias ll='ls -alh'
 # use eza,otherwise ls
@@ -132,19 +130,21 @@ fi
 #eza tree 
 alias lt="eza -T -L 2 -alh --git --icons --group-directories-first --group --time-style='+%Y-%m-%d %H:%M %a'"
 alias inst="sudo apt install"
-
 # to
 alias todotfiles="cd ~/wangjh-dotfiles"
 alias toobsidian="clear && cd ~/Documents/obsidian/jhobsidian"
-
 alias wezconfig="nvim ~/.config/wezterm/wezterm.lua"
 alias ghoconfig="nvim ~/.config/ghostty/config"
 alias zshconfig="nvim ~/.zshrc"
 
+alias cls="clear"
 alias r="ranger"
 alias cc="claude"
 alias cx="codex"
 alias ff="fastfetch"
+alias b="btop"
+alias y="yazi"
+alias g="lazygit"
 
 alias nvimk='NVIM_APPNAME="nvim-kickstart" nvim'
 
@@ -169,6 +169,9 @@ export PATH="$BUN_INSTALL/bin:$PATH"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 # [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+# go 
+export PATH=$PATH:/usr/local/go/bin
+
 
 # default editor,range use this to open file
 export EDITOR=nvim
@@ -177,3 +180,5 @@ export EDITOR=nvim
 # starship
 # put this at the end of zshrc
 eval "$(starship init zsh)"
+# zoxide
+eval "$(zoxide init zsh)"
