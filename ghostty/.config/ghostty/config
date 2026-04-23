@@ -67,21 +67,21 @@ theme = Catppuccin Mocha
 # background-opacity = 0.50
 # background-blur = 20
 
-#========== window ==========
+#================================================================================ windows
 #title bar
 # window-decoration = false
-# window-padding-x = 0
-# window-padding-y = 0 
+# remove all paddings
+window-padding-x = 0
+window-padding-y = 0 
+window-padding-balance = true
+window-padding-color = background
+
+# window-position-x = 1
+# window-position-y = 1
 
 #can display how many characters
 window-height = 40
 window-width = 160
-
-#remove padding(e.g. there is padding when opening neovim) 使用extend-always会让powerlevel10k出现问题 
-#window-padding-color = extend-always
-
-# window-position-x = 1
-# window-position-y = 1
 
 #=========================other function===================
 #to copy the terminfo entry the first time you log into a new server over SSH.
