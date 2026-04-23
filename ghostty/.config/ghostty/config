@@ -54,6 +54,9 @@
 font-size = 11
 # theme = Catppuccin Frappe
 theme = Catppuccin Mocha
+# theme = Catppuccin Latte
+# theme = CLRS
+# theme = Adwaita
 # theme = Ayu
 # theme = Ayu Mirage
 # theme = GitHub Dark Dimmed
