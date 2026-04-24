@@ -38,6 +38,8 @@ WORDCHARS=${WORDCHARS//[\/]}
 # zsh-autosuggestions
 #
 
+# bindkey -v
+
 # Disable automatic widget re-binding on each precmd. This can be set when
 # zsh-users/zsh-autosuggestions is the last module in your ~/.zimrc.
 ZSH_AUTOSUGGEST_MANUAL_REBIND=1
@@ -98,6 +100,7 @@ alias cx="codex"
 alias ff="fastfetch"
 alias b="btop"
 alias g="lazygit"
+alias bat="batcat"
 
 # yazi shell wrapper
 function y() {
@@ -112,18 +115,12 @@ export PATH="$HOME/.local/bin:$PATH"
 # maven
 export PATH="/opt/apache-maven-3.9.12/bin:$PATH"
 
-# nvm lazy load
-export NVM_DIR="$HOME/.nvm"
-lazy_load_nvm() {
-  unset -f nvm node npm npx pnpm yarn
-  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
-}
-nvm()  { lazy_load_nvm; nvm  "$@"; }
-node() { lazy_load_nvm; node "$@"; }
-npm()  { lazy_load_nvm; npm  "$@"; }
-npx()  { lazy_load_nvm; npx  "$@"; }
-pnpm() { lazy_load_nvm; pnpm "$@"; }
-yarn() { lazy_load_nvm; yarn "$@"; }
+# fnm
+FNM_PATH="/home/jianhui/.local/share/fnm"
+if [ -d "$FNM_PATH" ]; then
+  export PATH="$FNM_PATH:$PATH"
+  eval "$(fnm env --shell zsh)"
+fi
 
 # bun completions
 [ -s "/home/jianhui/.bun/_bun" ] && source "/home/jianhui/.bun/_bun"
@@ -141,8 +138,9 @@ export EDITOR=nvim
 # reduce vi-mode ESC(mode change) timeout
 export KEYTIMEOUT=1
 
-# starship
-# put this at the end of zshrc
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+# starship.put this at the end of zshrc
 eval "$(starship init zsh)"
 # zoxide
 eval "$(zoxide init zsh)"
