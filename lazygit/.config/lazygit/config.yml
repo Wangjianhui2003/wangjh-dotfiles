@@ -1,0 +1,11 @@
+git:
+  pagers:
+    - externalDiffCommand: difft --color=always
+    - externalDiffCommand: difft --color=always --display=inline
+
+    - pager: delta --dark --paging=never --line-numbers
+      colorArg: always
+
+    - pager: diff-so-fancy
+      colorArg: always
+
