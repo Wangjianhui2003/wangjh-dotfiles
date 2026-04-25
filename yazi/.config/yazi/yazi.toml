@@ -13,3 +13,16 @@ id = "git"    # Remove if Yazi > v26.1.22
 url = "*/"
 run = "git"
 group = "git"
+
+# [opener]
+# edit-in-ghostty = [
+#     { run = 'ghostty +new-window -e nvim "%s1"', orphan = true, desc = "nvim in Ghostty", for = "linux" },
+# ]
+#
+# [open]
+# prepend_rules = [{ mime = "text/*", use = "edit-in-ghostty" }]
+#
+# [opener]
+# edit = [
+#     { run = 'ghostty +new-window -e nvim "%s1"', orphan = true, for = "unix" },
+# ]

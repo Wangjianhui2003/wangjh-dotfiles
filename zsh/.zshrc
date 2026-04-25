@@ -102,6 +102,8 @@ alias b="btop"
 alias g="lazygit"
 alias bat="batcat"
 
+alias gcl="git clone"
+
 # yazi shell wrapper
 function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
