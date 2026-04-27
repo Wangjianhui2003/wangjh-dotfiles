@@ -32,7 +32,9 @@ zmodule zsh-users/zsh-history-substring-search
 # performance: ZSH_AUTOSUGGEST_MANUAL_REBIND=1
 zmodule zsh-users/zsh-autosuggestions
 
+# replace completion tab with fzf-search
+# input command and press tab
 zmodule Aloxaf/fzf-tab
 
-# better vi mode
+# better zsh vi mode
 zmodule jeffreytse/zsh-vi-mode

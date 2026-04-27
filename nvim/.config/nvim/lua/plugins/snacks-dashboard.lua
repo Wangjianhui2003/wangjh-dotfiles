@@ -85,6 +85,7 @@ return {
           section = "terminal",
           cmd = "chafa ~/Downloads/ahriheadw.jpeg --format symbols --symbols vhalf --size 30;sleep .1",
           -- cmd = "chafa ~/Downloads/ahriheadw.png --format kitty --size 30; sleep .1",
+          -- cmd = "chafa ~/Downloads/ahriheadw.png --size 30; sleep .1",
           padding = 1,
           indent = 4,
         },

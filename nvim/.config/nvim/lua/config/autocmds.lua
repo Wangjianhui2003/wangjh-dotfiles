@@ -26,21 +26,21 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 -- ================================================================================ spell check
 
 -- 关闭markdown等的拼写检查
--- vim.api.nvim_create_autocmd("FileType", {
---   pattern = { "markdown", "text", "gitcommit" },
---   callback = function()
---     vim.opt_local.spell = false
---   end,
--- })
-
--- 开启en检查，cjk:避免中文、日文、韩文被当成拼写错误
 vim.api.nvim_create_autocmd("FileType", {
   pattern = { "markdown", "text", "gitcommit" },
   callback = function()
-    vim.opt_local.spell = true
-    vim.opt_local.spelllang = { "en", "cjk" }
+    vim.opt_local.spell = false
   end,
 })
+
+-- 开启en检查，cjk:避免中文、日文、韩文被当成拼写错误
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = { "markdown", "text", "gitcommit" },
+--   callback = function()
+--     vim.opt_local.spell = true
+--     vim.opt_local.spelllang = { "en", "cjk" }
+--   end,
+-- })
 
 -- en     = generic English / 通用英语
 -- en_us  美式英语
