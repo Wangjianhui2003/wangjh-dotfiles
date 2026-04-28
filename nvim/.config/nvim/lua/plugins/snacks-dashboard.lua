@@ -1,13 +1,21 @@
 local dashboard_image = vim.fn.stdpath("config") .. "/asset/ahriheadw.jpeg"
-local dashboard_width = 60
-local dashboard_image_max_width = 50
-local dashboard_image_max_height = 14
+-- This wide image is usually height-limited in terminal cells, so grow width and height together.
+local dashboard_image_max_width = 54
+local dashboard_image_max_height = 20
+local dashboard_image_gap = 1
+local dashboard_width = math.max(60, dashboard_image_max_width)
+local dashboard_image_info = {
+  dpi = { width = 72, height = 72 },
+  size = { width = 1864, height = 1020 },
+}
 
-local function dashboard_image_placeholder()
+local render_dashboard_image
+
+local function dashboard_image_placeholder(height)
   local lines = {}
   local line = (" "):rep(dashboard_width)
 
-  for _ = 1, dashboard_image_max_height do
+  for _ = 1, height do
     lines[#lines + 1] = line
   end
 
@@ -15,17 +23,31 @@ local function dashboard_image_placeholder()
 end
 
 local function dashboard_image_size(placement)
-  local ok, size = pcall(Snacks.image.util.fit, placement.img.file, {
+  local file = placement and placement.img.file or dashboard_image
+  local info = placement and placement.img.info or dashboard_image_info
+  local ok, size = pcall(Snacks.image.util.fit, file, {
     width = dashboard_image_max_width,
     height = dashboard_image_max_height,
   }, {
-    info = placement.img.info,
+    info = info,
   })
 
   return ok and size or { width = dashboard_image_max_width, height = dashboard_image_max_height }
 end
 
-local function render_dashboard_image(self, pos)
+local function dashboard_image_section()
+  local size = dashboard_image_size()
+
+  return {
+    pane = 1,
+    -- Reserve only the fitted image height; the bottom gap is controlled by dashboard_image_gap.
+    text = dashboard_image_placeholder(size.height),
+    render = render_dashboard_image,
+    padding = dashboard_image_gap,
+  }
+end
+
+render_dashboard_image = function(self, pos)
   local row = pos[1]
 
   Snacks.image.placement.clean(self.buf)
@@ -136,13 +158,8 @@ return {
         end,
       },
       sections = {
-        -- { pane = 1, section = "header" },
-        {
-          pane = 1,
-          text = dashboard_image_placeholder(),
-          render = render_dashboard_image,
-          padding = 1,
-        },
+        { pane = 1, section = "header" },
+        dashboard_image_section,
         { pane = 1, icon = " ", title = "Recent Files", section = "recent_files", indent = 2, padding = 1 },
         { pane = 1, icon = " ", title = "Projects", section = "projects", indent = 2, padding = 1 },
         {
@@ -159,7 +176,7 @@ return {
           ttl = 5 * 60,
           indent = 3,
         },
-        -- { pane = 1, section = "keys", gap = 1, padding = 1 },
+        { pane = 1, section = "keys", gap = 1, padding = 1 },
         { pane = 1, section = "startup" },
       },
     },
