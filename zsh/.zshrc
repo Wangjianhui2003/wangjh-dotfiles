@@ -105,7 +105,7 @@ alias bat="batcat"
 alias gcl="git clone"
 
 # yazi shell wrapper
-function y() {
+function r() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
