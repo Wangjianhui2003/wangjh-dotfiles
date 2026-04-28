@@ -2,10 +2,10 @@ return {
   "neovim/nvim-lspconfig",
   opts = {
     diagnostics = {
-      virtual_text = false,
+      virtual_text = true,
     },
     codelens = {
-      enabled = true,
+      enabled = false, -- 目前有bug
     },
   },
 }

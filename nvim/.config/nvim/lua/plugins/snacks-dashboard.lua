@@ -1,3 +1,13 @@
+local dashboard_image = vim.fn.stdpath("config") .. "/asset/ahriheadw.jpeg"
+local dashboard_chafa_cmd = table.concat({
+  "chafa",
+  vim.fn.shellescape(dashboard_image),
+  "--format symbols",
+  "--symbols vhalf",
+  "--colors full",
+  "--size 30x9",
+}, " ")
+
 return {
   "folke/snacks.nvim",
   ---@type snacks.Config
@@ -77,15 +87,14 @@ return {
         end,
       },
       sections = {
-        { pane = 1, section = "header" },
-        { pane = 1, section = "keys", gap = 1, padding = 1 },
-        { pane = 1, section = "startup" },
+        { section = "header" },
+        { section = "keys", gap = 1, padding = 1 },
+        { section = "startup" },
         {
           pane = 2,
           section = "terminal",
-          cmd = "chafa ~/Downloads/ahriheadw.jpeg --format symbols --symbols vhalf --size 30;sleep .1",
-          -- cmd = "chafa ~/Downloads/ahriheadw.png --format kitty --size 30; sleep .1",
-          -- cmd = "chafa ~/Downloads/ahriheadw.png --size 30; sleep .1",
+          -- Force character output: dashboard terminal sections cannot render kitty graphics sequences.
+          cmd = dashboard_chafa_cmd,
           padding = 1,
           indent = 4,
         },

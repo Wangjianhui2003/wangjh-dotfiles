@@ -1,13 +1,25 @@
 return {
-  -- add gruvbox
-  { "ellisonleao/gruvbox.nvim" },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim theme
   {
     "LazyVim/LazyVim",
     opts = {
       colorscheme = "catppuccin-nvim",
+      -- colorscheme = "ayu-mirage",
     },
+  },
+
+  -- add theme
+  { "ellisonleao/gruvbox.nvim" },
+  {
+    "Shatur/neovim-ayu",
+    lazy = true,
+    config = function()
+      require("ayu").setup({
+        -- mirage = false, -- true = 使用 ayu-mirage
+        terminal = true,
+      })
+    end,
   },
 
   -- configure catppuccin-nvim
