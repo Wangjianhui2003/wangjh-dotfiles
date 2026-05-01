@@ -1,0 +1,19 @@
+[
+    {
+        "context": "Editor && vim_mode == insert",
+        "bindings": {
+            "escape": [
+                "action::Sequence",
+                [
+                    "vim::NormalBefore",
+                    [
+                        "task::Spawn",
+                        {
+                            "task_name": "fcitx5 deactivate"
+                        }
+                    ]
+                ]
+            ]
+        }
+    }
+]

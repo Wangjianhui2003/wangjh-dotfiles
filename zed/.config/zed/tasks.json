@@ -1,0 +1,11 @@
+[
+    {
+        "label": "fcitx5 deactivate",
+        "command": "fcitx5-remote -c",
+        "reveal": "never",
+        "hide": "always",
+        "show_summary": false,
+        "show_command": false,
+        "save": "none"
+    }
+]
