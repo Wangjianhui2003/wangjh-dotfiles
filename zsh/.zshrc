@@ -101,11 +101,12 @@ alias ff="fastfetch"
 alias b="btop"
 alias g="lazygit"
 alias bat="batcat"
+alias oc="opencode"
 
 alias gcl="git clone"
 
 # yazi shell wrapper
-function r() {
+function y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	command yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"
